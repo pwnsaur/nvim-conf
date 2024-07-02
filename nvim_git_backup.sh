@@ -56,6 +56,6 @@ else
 fi
 
 # Push to GitHub
-git push -u origin "$current_branch"
+git push --force -u origin "$current_branch"
 
 echo "Your Neovim configuration has been pushed to GitHub!"
