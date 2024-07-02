@@ -29,8 +29,8 @@ fi
 
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 
-read -p "Enter your GitHub username: " github_username
-read -p "Enter the name for your GitHub repository: " repo_name
+github_username="pwnsaur"
+repo_name="nvim-conf"
 
 if ! gh repo view "$github_username/$repo_name" &>/dev/null; then
     gh repo create "$repo_name" --public
@@ -49,3 +49,4 @@ fi
 git push --force -u origin "$current_branch"
 
 echo "Your Neovim configuration has been pushed to GitHub!"
+
